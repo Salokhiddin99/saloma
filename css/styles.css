@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	position: relative;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+input {
+	visibility: hidden;
+}
+.fa-xmark {
+	display: none;
+}
+.modal {
+	background-color: rgba(0, 0, 0, 0.629);
+	width: 400px;
+	height: 400px;
+	transform: translateY(-600px);
+	box-shadow: 0 0 5px 1px rgb(38, 33, 33);
+	transition: all 2s ease-in-out;
+	padding: 10px;
+}
+input:checked ~ .fa-bars {
+	display: none;
+}
+input:checked ~ .fa-xmark {
+	display: inline;
+}
+input:checked ~ .modal {
+	transform: translateY(0);
+}
+.black {
+	color: blue;
+	position: absolute;
+	left: -50px;
+	z-index: 10;
+}
+.black::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+}
+.black::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-color: rgb(214, 203, 203);
+}
+.lines {
+	position: relative;
+	margin-top: 100px;
+}
+.line::before {
+	content: '';
+	position: absolute;
+	width: 1000px;
+	height: 2px;
+	color: black;
+	background-color: black;
+}
+.line1::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid red;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.line2::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid red;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.line3::after {
+	content: '';
+	position: absolute;
+	top: -5px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid red;
+	vertical-align: middle;
+	border-radius: 50%;
+}
